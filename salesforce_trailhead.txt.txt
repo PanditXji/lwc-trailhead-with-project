@@ -1,0 +1,61 @@
+Salesforce DX Enviornment 
+DX stands for Developer Experience 
+Salesforce CLI is used for salesforce developer experience
+trailhead Org -- vk869362@brave-wolf-32f30b.com - Cunning@1234
+link to enter in production authorize org -- lwc_and_salesforce_data
+playground for communication btwn c to p -- Wise Goat Playground link --vk869362@brave-raccoon-o2iknz.com
+pass -- Wise@1234
+Testing Test Questions__
+1.
+What are the main differences between unit and end-to-end testing? Unit tests are small and discrete where end-to-end tests cover the whole user experiences.
+section-2
+1.Which of the following best describes Jest?-- Jest is a powerful tool with rich features for writing JS tests.
+2.why is node.js important for lwc tests?-- A&C - Jest tests don't run in a browser and sue node's js runtime to execute, @salesforce/sfdx-lwc-jest is a Node module that runs tests for LWCs.
+section--3
+1.what is the describe block used for in jest?-- the describe block is jest test suite and allows for multiple test suites to be nested.
+2. Which lifecycle hook fires when a component is inserted ino the DOM?-- ConnectedCallback()
+section--4
+1.what are the three primary wire service adapters?--Lightning data service,generic and apex wire adapters
+2. which of the options below describes the best reason for mocking data for testing?--It ensures tests aren't dependent on unprectible factors like remote invocation or server latency.
+section--5
+1.How does sfdx-lwc-jest allow for Jest testing of Lightning Base Components?--it includes a set of stubs for all components in the Aura namespace.
+2.What files are necessary to stub a component?-- stubs need a least an HTML and JS file.
+Coding For Web Accessibility Section MCQ--Section-1
+1.What kind of markup is necessary for content to be accessible, readable, and understandable by machines, software, and assistive technologies?--Semantic
+2.What are the three types of ARIA attributes?-- roles, states, and properties
+Section--2
+1.How should a web page provide users with navigation and action information?--A&C (A.with consistent navigational elements and visible focus indicators for interactive items.
+C.with logical tab order that matches reading order and proper heading nesting and order.)
+2.What does a user use to navigate complex components, such as interactive grids, menus, comboboxes, and tabsets?--Arrow Keys
+Section-3
+1.Lightning components in which namespace follow the latest ARIA standards?--Lightning
+2.What are some steps you should follow when building your own Lightning component to make sure it's accessible?B&C (B.Implement keyboard interactions and manage user focus. C.Write automation and manually test your componet)
+Quiz-18
+1.When would a Lightning Developer use renderedCallback() instead of connectedCallback()?-- When there are requirements to perform logic after a component finishes the rendering phase
+2.A Lightning web component is passing a value to a child component. Which decorator defines the variable in the child component?--@api
+3.
+A child Lightning web component sends a custom event "search" to the parent component. The parent component has a "handleSearch" method. How should the parent component handle events from the child component?--<c-search-form onsearch={handleSearch}/>
+4.
+Why would a developer use a message channel over custom events of Lightning web components?--to broadcast a message to multiple components
+5.Which statement is true about the rendering of the inner div with css class title in the following component composition: <template> <c-custom-card> <div class="title">{title}</div> </c-custom-card> </template>??--The title style will render due to the div not being owned by the custom card component and not in its shadow tree.
+6.How would a developer use custom labels in Lightning web components?--Import it with @salesforce/label statement.
+7.Why would a developer use <apex:includeLightning/> on a regular Visualforce page?--to load the js file used by lightning components  for visualForce
+8.Given an error caught in the try-catch block from a Lightning web component JavaScript file, which statement must be used to view the contents of the object err in the console as a string?--console.log(JSON.stringify(err));
+9.How should a developer use a JavaScript library from a remote third-party site in a Lightning web component?--Add the library to a static resource, and then add the static resource to the component
+10.What should a developer use to retrieve picklist field values in a Lightning web component?--import {getPicklistValues} from 'lightning/uiObjectInfoApi';
+QUIZ--19
+1.Which statement returns all the paragraphs in the Shadow Dom element?-- const paragraphs = element.shadowRoot.querySelector('p');
+2.Which statement is accurate regarding how Jest tests use jsdom?-- Each test file shares a single instance of jsdom and changes  are not reset btwn tests inside the file
+3.
+Which sequence allows for testing a property without waiting for an asynchronous update?--the property is set prior to the appendChild() call.
+4.
+Which import is required and only available in Lightning Web Component Jest tests?-- import {creatElement} from 'lwc';
+5.Which statement must be used to set fake timers before all the tests in a Jest JavaScript file?--jest.useFakeTimers() inside the beforeAll() function.
+6.Which function must be used for Apex Wire adapters in Jest tests?--createApexTestWireAdapter() from "@salesforce/wire-service-jest-utils";
+7.Which statement is true about testing Base Lightning Components?--Best lightning componets have some properties that are not reflected as attributes in the DOM.
+8.
+What must be done to Jest tests to cause a module import statement inside a JavaScript file to resolve to the mocked version of this module?--Add the mocked module file to the moduleNameMapper settings in the jest.config file
+9.Given a registered Apex wire adapter named findRecordsAdapter and a mocked @wire named mockRecords, which statement causes a Jest test to use the mocked records once the Apex method is called?--findRecordsAdapter.emit(mockRecords);
+10.Which statement allows the Jest test to catch a mock handler for a toast event?-- const handler = jest.fn(); element.addEventListner(ShowToastEventName,handler);
+
+What is LMS??(Yes, Lightning Message Service (LMS) is a communication framework in Salesforce that allows you to pass messages between Lightning Web Components (LWCs))
